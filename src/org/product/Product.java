@@ -4,13 +4,11 @@ public class Product {
 	private int id;
 	private String name;
 	private int quantity;
-	private int threshold;
 	
-	public Product(int id,String name,int quantity,int threshold) {
+	public Product(int id,String name,int quantity) {
 		 this.id = id;
 		 this.name = name;
 		 this.quantity = quantity;
-		 this.threshold = threshold;
 	}
 	
 	public int getId() {
@@ -31,13 +29,6 @@ public class Product {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	public int getthreshold() {
-		return threshold;
-	}
-	public void setOrderThreshold(int threshold) {
-		this.threshold = threshold;
-	}
-	
 	public String toString() {
 	   return id+","+name+","+quantity+","+threshold;	
 	}
