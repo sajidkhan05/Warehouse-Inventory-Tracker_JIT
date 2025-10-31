@@ -7,7 +7,9 @@ import org.product.Product;
 import org.stock.StockObserver;
 
 public class Warehouse {
+	private int wareId;
 	private String name;
+	private int threshold;
 	private HashMap<Integer,Product> inventory = new HashMap<Integer,Product>();
     private ArrayList<StockObserver>  observers = new ArrayList<StockObserver>();
     
@@ -60,7 +62,7 @@ public class Warehouse {
     	   prod.setQuantity(prod.getQuantity() - quantity);
     	   System.out.println("Order fullfilled: "+quantity+ " for "+prod.getName());
     	   
-    	   if(prod.getQuantity() < prod.getthreshold()) {
+    	   if(prod.getQuantity() < threshold) {
     		   notifyObservers(prod);
     	   }
     }
