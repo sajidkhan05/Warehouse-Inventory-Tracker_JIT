@@ -10,7 +10,7 @@ public class Test {
 	  AlertService alert = new AlertService();
 	
 	  warehouse.addObserver(alert);
-	  Product laptop = new Product(101, "Laptop", 0, 5);
+	  Product laptop = new Product(101, "Laptop", 0);
 	  warehouse.addProduct(laptop);
 	  
 	  Thread shipmentThread = new Thread(()->{
