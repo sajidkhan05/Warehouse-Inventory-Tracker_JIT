@@ -17,8 +17,10 @@ public class Warehouse {
     	
     }
     
-    public Warehouse(String name) {
-    	   this.name = name;
+    public Warehouse(int wareId,String name,int threshold) {
+    	 this.wareId = wareId;  
+		this.name = name;
+		this.threshold = threshold;
     }
     
     public void addObserver(StockObserver observer) {
